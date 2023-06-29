@@ -101,6 +101,8 @@
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
@@ -387,6 +389,13 @@
       margin-right: 0; 
     }
   </style>
+  <script type="module" src="index_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+  <link href="index_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+  <script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+  <script src="custom.js"></script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -417,10 +426,37 @@ Anway Bose
 
   <p class="date">June 29, 2023</p>
 </section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell" data-execution_count="1">
+<section id="decentraland" class="slide level2" data-background-video="./vids/dcl_hero.mp4" data-background-video-loop="true" data-background-opacity="0.4">
+<h2>Decentraland</h2>
+<div>
+<ul>
+<li class="fragment">A virtual world based on Ethereum</li>
+<li class="fragment">It touts itself as the first to be owned by its users</li>
+<li class="fragment">It started in 2015 and launched in February 2020</li>
+<li class="fragment">It uses MANA as its own cryptocurrency</li>
+<li class="fragment">Decentralized Autonomous Organization (DAO)</li>
+<li class="fragment">NFT trading of land, usernames, and <strong>wearables</strong></li>
+<li class="fragment">Influence on how fashion assets will work on the Metaverse</li>
+</ul>
+</div>
+</section>
+<section id="metaverse-fashion-week" class="slide level2">
+<h2>Metaverse Fashion Week</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<video data-autoplay="" loop="" src="vids/mvfw_dg.mp4">
+</video>
+</div><div class="column" style="width:65%;">
+<p>Held in March 2022, the MVFW involved several in-world fashion events and a wide variety of commodity and luxury brands, including <em>Tommy Hilfiger</em> and <em>Dolce &amp; Gabbana</em>.</p>
+</div>
+</div>
+</section>
+<section id="python-code-option-1" class="slide level2">
+<h2>Python Code (option 1)</h2>
+<div class="cell columns column-output-location" data-execution_count="1">
+<div class="column">
+<details>
+<summary>expand for full code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -431,8 +467,164 @@ Anway Bose
 <span id="cb1-8"><a href="#cb1-8"></a>ax.plot(theta, r)</span>
 <span id="cb1-9"><a href="#cb1-9"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
 <span id="cb1-10"><a href="#cb1-10"></a>ax.grid(<span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div><div class="column fragment">
 <div class="cell-output cell-output-display">
 <p><img data-src="index_files/figure-revealjs/cell-2-output-1.png" width="450" height="439"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="python-code-option-2" class="slide level2">
+<h2>Python Code (option 2)</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb2-6"><a href="#cb2-6"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb2-7"><a href="#cb2-7"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
+<span id="cb2-8"><a href="#cb2-8"></a>ax.plot(theta, r)</span>
+<span id="cb2-9"><a href="#cb2-9"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb2-10"><a href="#cb2-10"></a>ax.grid(<span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:40%;">
+<div class="cell" data-execution_count="2">
+<details>
+<summary>expand for full code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb3-6"><a href="#cb3-6"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb3-7"><a href="#cb3-7"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
+<span id="cb3-8"><a href="#cb3-8"></a>ax.plot(theta, r)</span>
+<span id="cb3-9"><a href="#cb3-9"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb3-10"><a href="#cb3-10"></a>ax.grid(<span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+
+</div>
+</div>
+</section>
+<section id="python-code-option-2-output" class="slide level2 output-location-slide"><h2>Python Code (option 2)</h2><div class="cell output-location-slide" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<p><img data-src="index_files/figure-revealjs/cell-3-output-1.png" width="450" height="439"></p>
+</div>
+</div></section><section id="test-animate" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Test Animate</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb4-1" class="hljs-ln-code"><a href="#cb4-1"></a><span class="co"># Fill in the spot we created for a plot</span></span>
+<span id="cb4-2" class="hljs-ln-code"><a href="#cb4-2"></a>output<span class="sc">$</span>phonePlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
+<span id="cb4-3" class="hljs-ln-code"><a href="#cb4-3"></a>  <span class="co"># Render a barplot</span></span>
+<span id="cb4-4" class="hljs-ln-code"><a href="#cb4-4"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="test-animate-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Test Animate</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a href="#cb5-1"></a><span class="co"># Fill in the spot we created for a plot</span></span>
+<span id="cb5-2" class="hljs-ln-code"><a href="#cb5-2"></a>output<span class="sc">$</span>phonePlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
+<span id="cb5-3" class="hljs-ln-code"><a href="#cb5-3"></a>  <span class="co"># Render a barplot</span></span>
+<span id="cb5-4" class="hljs-ln-code"><a href="#cb5-4"></a>  <span class="fu">barplot</span>(WorldPhones[,input<span class="sc">$</span>region]<span class="sc">*</span><span class="dv">1000</span>, </span>
+<span id="cb5-5" class="hljs-ln-code"><a href="#cb5-5"></a>          <span class="at">main=</span>input<span class="sc">$</span>region,</span>
+<span id="cb5-6" class="hljs-ln-code"><a href="#cb5-6"></a>          <span class="at">ylab=</span><span class="st">"Number of Telephones"</span>,</span>
+<span id="cb5-7" class="hljs-ln-code"><a href="#cb5-7"></a>          <span class="at">xlab=</span><span class="st">"Year"</span>)</span>
+<span id="cb5-8" class="hljs-ln-code"><a href="#cb5-8"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="crazy-animate" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<h2 data-id="quarto-animate-title">crazy animate</h2>
+<div class="r-hstack">
+<div data-id="box1" data-auto-animate-delay="0" style="background: #2780e3; width: 200px; height: 150px; margin: 10px;">
+
+</div>
+<div data-id="box2" data-auto-animate-delay="0.1" style="background: #3fb618; width: 200px; height: 150px; margin: 10px;">
+
+</div>
+<div data-id="box3" data-auto-animate-delay="0.2" style="background: #e83e8c; width: 200px; height: 150px; margin: 10px;">
+
+</div>
+</div>
+</section>
+<section id="crazy-animate-1" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<h2 data-id="quarto-animate-title">crazy animate</h2>
+<div class="r-stack">
+<div data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;">
+
+</div>
+<div data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px;">
+
+</div>
+<div data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;">
+
+</div>
+</div>
+</section>
+<section id="ok" class="slide level2">
+<h2>ok</h2>
+<div class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="33">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"98b96619a9ef4c7996a6328f1a0e2806","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+</section>
+<section id="sll" class="slide level2">
+<h2>sll</h2>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="197" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 196;"><span id="cb6-197"><a href="#cb6-197"></a>viewof m <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>(</span>
+<span id="cb6-198"><a href="#cb6-198"></a>  [<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> </span>
+<span id="cb6-199"><a href="#cb6-199"></a>  {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Message:"</span>}</span>
+<span id="cb6-200"><a href="#cb6-200"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="34">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"98b96619a9ef4c7996a6328f1a0e2806","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+</section>
+<section id="learn-with-error-lwe" class="slide level2">
+<h2>Learn with Error (LWE)</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Formulation</a></li><li><a href="#tabset-1-2">Code</a></li><li><a href="#tabset-1-3">Result</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p>You can randomly generate a vector <span class="math inline">\(A\)</span> of random number and a noise vector <span class="math inline">\(n\)</span> with a secret value <span class="math inline">\(s\)</span> to create <span class="math display">\[
+B=As+n
+\]</span></p>
+</div>
+<div id="tabset-1-2">
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>A<span class="op">=</span>[<span class="dv">80</span>, <span class="dv">86</span>, <span class="dv">19</span>, <span class="dv">62</span>, <span class="dv">2</span>, <span class="dv">83</span>, <span class="dv">25</span>, <span class="dv">47</span>, <span class="dv">20</span>, <span class="dv">58</span>, <span class="dv">45</span>, <span class="dv">15</span>, <span class="dv">30</span>, <span class="dv">68</span>, <span class="dv">4</span>, <span class="dv">13</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">42</span>, <span class="dv">92</span>]</span>
+<span id="cb7-2"><a href="#cb7-2"></a>e<span class="op">=</span>[<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">3</span>]</span>
+<span id="cb7-3"><a href="#cb7-3"></a>s<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>q <span class="op">=</span> <span class="dv">97</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>B<span class="op">=</span>[]</span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="bu">len</span>(A)):</span>
+<span id="cb7-7"><a href="#cb7-7"></a>   B.append((A[x]<span class="op">*</span>s<span class="op">+</span>e[x])<span class="op">%</span>q)</span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="bu">print</span>(<span class="st">"&gt;&gt; B=</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(B))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-3">
+<div class="cell" data-execution_count="5">
+<div class="cell-output cell-output-stdout">
+<pre><code>&gt;&gt; B=[15, 45, 2, 20, 13, 30, 32, 45, 4, 3, 34, 78, 55, 51, 23, 67, 44, 34, 17, 75]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="test-selection" class="slide level2">
+<h2>test selection</h2>
+<div class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<p>The radius of the circle is 10.</p>
 </div>
 </div>
 </section>
@@ -441,36 +633,42 @@ Anway Bose
 <p>You can randomly generate a vector <span class="math inline">\(A\)</span> of random number and a noise vector <span class="math inline">\(n\)</span> with a secret value <span class="math inline">\(s\)</span> to create <span class="math display">\[
 B=As+n
 \]</span></p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>A<span class="op">=</span>[<span class="dv">80</span>, <span class="dv">86</span>, <span class="dv">19</span>, <span class="dv">62</span>, <span class="dv">2</span>, <span class="dv">83</span>, <span class="dv">25</span>, <span class="dv">47</span>, <span class="dv">20</span>, <span class="dv">58</span>, <span class="dv">45</span>, <span class="dv">15</span>, <span class="dv">30</span>, <span class="dv">68</span>, <span class="dv">4</span>, <span class="dv">13</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">42</span>, <span class="dv">92</span>]</span>
-<span id="cb2-2"><a href="#cb2-2"></a>e<span class="op">=</span>[<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">3</span>]</span>
-<span id="cb2-3"><a href="#cb2-3"></a>s<span class="op">=</span><span class="dv">5</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>q <span class="op">=</span> <span class="dv">97</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>B<span class="op">=</span>[]</span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="bu">len</span>(A)):</span>
-<span id="cb2-7"><a href="#cb2-7"></a>   B.append((A[x]<span class="op">*</span>s<span class="op">+</span>e[x])<span class="op">%</span>q)</span>
-<span id="cb2-8"><a href="#cb2-8"></a>B</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>[15, 45, 2, 20, 13, 30, 32, 45, 4, 3, 34, 78, 55, 51, 23, 67, 44, 34, 17, 75]</code></pre>
+<div class="cell" data-execution_count="7">
+<details>
+<summary>expand for full code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>A<span class="op">=</span>[<span class="dv">80</span>, <span class="dv">86</span>, <span class="dv">19</span>, <span class="dv">62</span>, <span class="dv">2</span>, <span class="dv">83</span>, <span class="dv">25</span>, <span class="dv">47</span>, <span class="dv">20</span>, <span class="dv">58</span>, <span class="dv">45</span>, <span class="dv">15</span>, <span class="dv">30</span>, <span class="dv">68</span>, <span class="dv">4</span>, <span class="dv">13</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">42</span>, <span class="dv">92</span>]</span>
+<span id="cb9-2"><a href="#cb9-2"></a>e<span class="op">=</span>[<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">3</span>]</span>
+<span id="cb9-3"><a href="#cb9-3"></a>s<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>q <span class="op">=</span> <span class="dv">97</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>B<span class="op">=</span>[]</span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="bu">len</span>(A)):</span>
+<span id="cb9-7"><a href="#cb9-7"></a>   B.append((A[x]<span class="op">*</span>s<span class="op">+</span>e[x])<span class="op">%</span>q)</span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="bu">print</span>(<span class="st">"&gt;&gt; B=</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(B))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>&gt;&gt; B=[15, 45, 2, 20, 13, 30, 32, 45, 4, 3, 34, 78, 55, 51, 23, 67, 44, 34, 17, 75]</code></pre>
 </div>
 </div>
+<p>Now, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are made as public keys while <span class="math inline">\(s\)</span> is the secret private key</p>
 </section>
-<section id="encryption" class="slide level2">
-<h2>Encryption</h2>
-<p>You can create <span class="math display">\[\begin{eqnarray*}
+<section id="encryption-for-a-message-m" class="slide level2">
+<h2>Encryption for a message <span class="math inline">\(M\)</span></h2>
+<span class="math display">\[\begin{eqnarray*}
 u&amp;=&amp;\left(\sum_{i}^{} {A_i}\right) \mod q\\
 v&amp;=&amp;\left(\sum_{i}^{}{B_i} +\left\lfloor\frac{q}{2}M\right\rfloor \right) \mod q
-\end{eqnarray*}\]</span></p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> math</span>
-<span id="cb4-2"><a href="#cb4-2"></a>u<span class="op">=</span><span class="dv">0</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>v<span class="op">=</span><span class="dv">0</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>M<span class="op">=</span><span class="dv">0</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="bu">len</span>(A)):</span>
-<span id="cb4-6"><a href="#cb4-6"></a>   u<span class="op">=</span>(u<span class="op">+</span>A[x])<span class="op">%</span>q</span>
-<span id="cb4-7"><a href="#cb4-7"></a>   v<span class="op">=</span>v<span class="op">+</span>math.floor(q<span class="op">/</span><span class="dv">2</span>)<span class="op">*</span>M</span>
-<span id="cb4-8"><a href="#cb4-8"></a></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="bu">print</span>(<span class="st">"&gt;&gt; u:</span><span class="sc">{}</span><span class="st">, v:</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(u,v))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+\end{eqnarray*}\]</span>
+<div class="cell" data-execution_count="8">
+<details>
+<summary>expand for full code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> math</span>
+<span id="cb11-2"><a href="#cb11-2"></a>u,v<span class="op">=</span>[<span class="dv">0</span>,<span class="dv">0</span>] </span>
+<span id="cb11-3"><a href="#cb11-3"></a>M<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="bu">len</span>(A)):</span>
+<span id="cb11-5"><a href="#cb11-5"></a>   u<span class="op">=</span>(u<span class="op">+</span>A[x])<span class="op">%</span>q</span>
+<span id="cb11-6"><a href="#cb11-6"></a>   v<span class="op">=</span>v<span class="op">+</span>math.floor(q<span class="op">/</span><span class="dv">2</span>)<span class="op">*</span>M</span>
+<span id="cb11-7"><a href="#cb11-7"></a></span>
+<span id="cb11-8"><a href="#cb11-8"></a><span class="bu">print</span>(<span class="st">"&gt;&gt; u:</span><span class="sc">{}</span><span class="st">, v:</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(u,v))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt;&gt; u:29, v:0</code></pre>
 </div>
@@ -483,39 +681,162 @@ d = (v-su) \mod q
 \]</span></p>
 <p><span class="math display">\[
 \bar{m}=\begin{cases}
-0 &amp; d &lt;\frac{q}{2},\\
-1 &amp; d&gt;\frac{q}{2}
+1 &amp; d &lt;\frac{q}{2},\\
+0 &amp; d&gt;\frac{q}{2}
 \end{cases}
 \]</span></p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> math</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="bu">print</span>(<span class="st">"&gt;&gt; u:</span><span class="sc">{}</span><span class="st">, v:</span><span class="sc">{}</span><span class="st">, s:</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(u,v, s))</span>
-<span id="cb6-3"><a href="#cb6-3"></a>d <span class="op">=</span> (v<span class="op">-</span>s<span class="op">*</span>u) <span class="op">%</span>q</span>
-<span id="cb6-4"><a href="#cb6-4"></a>mbar <span class="op">=</span> <span class="dv">1</span> <span class="cf">if</span> d <span class="op">&gt;</span> q<span class="op">/</span><span class="dv">2</span> <span class="cf">else</span> <span class="dv">0</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="bu">print</span>(<span class="st">"&gt;&gt; d:</span><span class="sc">{}</span><span class="st">, m:</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(d,mbar))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> math</span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="bu">print</span>(<span class="st">"&gt;&gt; u:</span><span class="sc">{}</span><span class="st">, v:</span><span class="sc">{}</span><span class="st">, s:</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(u,v, s))</span>
+<span id="cb13-3"><a href="#cb13-3"></a>d <span class="op">=</span> (v<span class="op">-</span>s<span class="op">*</span>u) <span class="op">%</span>q</span>
+<span id="cb13-4"><a href="#cb13-4"></a>mbar <span class="op">=</span> <span class="dv">1</span> <span class="cf">if</span> d <span class="op">&lt;</span> q<span class="op">/</span><span class="dv">2</span> <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="bu">print</span>(<span class="st">"&gt;&gt; d:</span><span class="sc">{}</span><span class="st">, m:</span><span class="sc">{}</span><span class="st">, orginal message m:</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(d,mbar,M))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt;&gt; u:29, v:0, s:5
-&gt;&gt; d:49, m:1</code></pre>
+&gt;&gt; d:49, m:0, orginal message m:0</code></pre>
 </div>
 </div>
 </section>
 <section id="get-results" class="slide level2">
 <h2>get results</h2>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-4"><a href="#cb8-4"></a></span>
-<span id="cb8-5"><a href="#cb8-5"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb8-6"><a href="#cb8-6"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb8-7"><a href="#cb8-7"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
-<span id="cb8-8"><a href="#cb8-8"></a>ax.plot(theta, r)</span>
-<span id="cb8-9"><a href="#cb8-9"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb8-10"><a href="#cb8-10"></a>ax.grid(<span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb15-4"><a href="#cb15-4"></a></span>
+<span id="cb15-5"><a href="#cb15-5"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb15-6"><a href="#cb15-6"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb15-7"><a href="#cb15-7"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
+<span id="cb15-8"><a href="#cb15-8"></a>ax.plot(theta, r)</span>
+<span id="cb15-9"><a href="#cb15-9"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb15-10"><a href="#cb15-10"></a>ax.grid(<span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img data-src="index_files/figure-revealjs/cell-6-output-1.png" width="450" height="439"></p>
+<p><img data-src="index_files/figure-revealjs/cell-11-output-1.png" width="450" height="439"></p>
 </div>
 </div>
+</section>
+<section id="published-wearables" class="slide level2">
+<h2>Published Wearables</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li class="fragment">Circa 88% of submitted items are published</li>
+<li class="fragment">The vast majority (92.3%) of wearables are unisex</li>
+<li class="fragment">Most collections (68.8%) have only one item</li>
+<li class="fragment">Share by rarity follows a bell-shaped distribution</li>
+</ul>
+</div><div class="column" style="width:5%;">
+<!-- empty column to create gap -->
+</div><div class="column fragment" style="width:40%;">
+<div style="font-size: 75%;">
+<table>
+<thead>
+<tr class="header">
+<th>Rarity</th>
+<th style="text-align: right;">Limit</th>
+<th style="text-align: right;">Share</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>unique</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4.2%</td>
+</tr>
+<tr class="even">
+<td>mythic</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">7.6%</td>
+</tr>
+<tr class="odd">
+<td>legendary</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">32.3%</td>
+</tr>
+<tr class="even">
+<td>epic</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">31.5%</td>
+</tr>
+<tr class="odd">
+<td>rare</td>
+<td style="text-align: right;">5000</td>
+<td style="text-align: right;">11.7%</td>
+</tr>
+<tr class="even">
+<td>uncommon</td>
+<td style="text-align: right;">10000</td>
+<td style="text-align: right;">7.4%</td>
+</tr>
+<tr class="odd">
+<td>common</td>
+<td style="text-align: right;">100000</td>
+<td style="text-align: right;">5.3%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="primary-sale-price-linear-model" class="slide level2">
+<h2>Primary Sale Price Linear Model</h2>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {r} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a href="#cb16-1"></a>htmltools::withTags(</span>
+<span id="cb16-2"><a href="#cb16-2"></a>  table(</span>
+<span id="cb16-3"><a href="#cb16-3"></a>    thead(</span>
+<span id="cb16-4"><a href="#cb16-4"></a>      tr(</span>
+<span id="cb16-5"><a href="#cb16-5"></a>        th(""),</span>
+<span id="cb16-6"><a href="#cb16-6"></a>        th("log₁₀(price USD)", colspan=2, align="center")</span>
+<span id="cb16-7"><a href="#cb16-7"></a>      ),</span>
+<span id="cb16-8"><a href="#cb16-8"></a>      tr(</span>
+<span id="cb16-9"><a href="#cb16-9"></a>        th("Coefficient"),</span>
+<span id="cb16-10"><a href="#cb16-10"></a>        th("Estimate"),</span>
+<span id="cb16-11"><a href="#cb16-11"></a>        th("Std. Error")</span>
+<span id="cb16-12"><a href="#cb16-12"></a>      ),</span>
+<span id="cb16-13"><a href="#cb16-13"></a>      style = "background-color:#333;"</span>
+<span id="cb16-14"><a href="#cb16-14"></a>    ),</span>
+<span id="cb16-15"><a href="#cb16-15"></a>    tbody(</span>
+<span id="cb16-16"><a href="#cb16-16"></a>      tr(</span>
+<span id="cb16-17"><a href="#cb16-17"></a>        td("(Intercept)"),</span>
+<span id="cb16-18"><a href="#cb16-18"></a>        td("2.137", align="right"),</span>
+<span id="cb16-19"><a href="#cb16-19"></a>        td("0.049", align="right")</span>
+<span id="cb16-20"><a href="#cb16-20"></a>      ),</span>
+<span id="cb16-21"><a href="#cb16-21"></a>      tr(</span>
+<span id="cb16-22"><a href="#cb16-22"></a>        td("log₁₀(rarity limit)"),</span>
+<span id="cb16-23"><a href="#cb16-23"></a>        td("–0.389", align="right"),</span>
+<span id="cb16-24"><a href="#cb16-24"></a>        td("0.012", align="right")</span>
+<span id="cb16-25"><a href="#cb16-25"></a>      ),</span>
+<span id="cb16-26"><a href="#cb16-26"></a>      tr(</span>
+<span id="cb16-27"><a href="#cb16-27"></a>        td("is single-item collection"),</span>
+<span id="cb16-28"><a href="#cb16-28"></a>        td("–0.325", align="right"),</span>
+<span id="cb16-29"><a href="#cb16-29"></a>        td("0.024", align="right")</span>
+<span id="cb16-30"><a href="#cb16-30"></a>      ),</span>
+<span id="cb16-31"><a href="#cb16-31"></a>      tr(</span>
+<span id="cb16-32"><a href="#cb16-32"></a>        td("is unique"),</span>
+<span id="cb16-33"><a href="#cb16-33"></a>        td("0.569", align="right"),</span>
+<span id="cb16-34"><a href="#cb16-34"></a>        td("0.119", align="right")</span>
+<span id="cb16-35"><a href="#cb16-35"></a>      ),</span>
+<span id="cb16-36"><a href="#cb16-36"></a>      tr(</span>
+<span id="cb16-37"><a href="#cb16-37"></a>        td("textures"),</span>
+<span id="cb16-38"><a href="#cb16-38"></a>        td("0.057", align="right"),</span>
+<span id="cb16-39"><a href="#cb16-39"></a>        td("0.013", align="right")</span>
+<span id="cb16-40"><a href="#cb16-40"></a>      )</span>
+<span id="cb16-41"><a href="#cb16-41"></a>    )</span>
+<span id="cb16-42"><a href="#cb16-42"></a>  )</span>
+<span id="cb16-43"><a href="#cb16-43"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="line-highlighting" class="slide level2">
+<h2>Line Highlighting</h2>
+<div class="sourceCode" id="cb17" data-code-line-numbers="6-8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb17-3"><a href="#cb17-3"></a></span>
+<span id="cb17-4"><a href="#cb17-4"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb17-5"><a href="#cb17-5"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb17-6"><a href="#cb17-6"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
+<span id="cb17-7"><a href="#cb17-7"></a>ax.plot(theta, r)</span>
+<span id="cb17-8"><a href="#cb17-8"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb17-9"><a href="#cb17-9"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb17-10"><a href="#cb17-10"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer footer-default">
 
 </div>
@@ -530,6 +851,7 @@ d = (v-su) \mod q
   <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
   <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
@@ -546,13 +868,14 @@ d = (v-su) \mod q
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': false,
+'previewLinksAuto': true,
 'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'pointer': {"key":"q","color":"#e7298a","pointerSize":24,"alwaysVisible":false},
 'smaller': false,
  
@@ -574,7 +897,7 @@ d = (v-su) \mod q
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -724,7 +1047,7 @@ d = (v-su) \mod q
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealPointer, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, RevealPointer, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -732,6 +1055,20 @@ d = (v-su) \mod q
           RevealZoom
         ]
       });
+    </script>
+    <script type="ojs-module-contents">
+    {"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"viewof m = Inputs.range(\n  [0, 1], \n  {value: 0, step: 1, label: \"Message:\"}\n)\n"},{"methodName":"interpretQuiet","source":"shinyInput('m')"}]}
+    </script>
+    <script type="module">
+    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+    window._ojs.paths.runtimeToDoc = "../../..";
+    window._ojs.paths.runtimeToRoot = "../../..";
+    window._ojs.paths.docToRoot = "";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
+    </script>
+    <script type="application/vnd.jupyter.widget-state+json">
+    {"state":{"13fd3d72b6db45749f2da73f2e000c0b":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletZoomControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletZoomControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletZoomControlView","options":["position","zoom_in_text","zoom_in_title","zoom_out_text","zoom_out_title"],"position":"topleft","zoom_in_text":"+","zoom_in_title":"Zoom in","zoom_out_text":"-","zoom_out_title":"Zoom out"}},"1470102c3fe44858b00a6eb77e0de649":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"28b00436f0354ffe8ac2cd63822a06cd":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"28d88137c33c47fda9abba9c061776df":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMarkerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMarkerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMarkerView","alt":"","base":false,"bottom":false,"draggable":true,"icon":null,"keyboard":true,"location":[52.204793,360.121558],"name":"","opacity":1,"options":["alt","draggable","keyboard","rise_offset","rise_on_hover","rotation_angle","rotation_origin","title","z_index_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"rise_offset":250,"rise_on_hover":false,"rotation_angle":0,"rotation_origin":"","subitems":[],"title":"","visible":true,"z_index_offset":0}},"3637b6c1fc264d638bd649b26a6d564b":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapModel","state":{"_dom_classes":[],"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMapView","bottom":0,"bounce_at_zoom_limits":true,"box_zoom":true,"center":[52.204793,360.121558],"close_popup_on_click":true,"controls":["IPY_MODEL_5882e48716b443709f332a613cd31d08","IPY_MODEL_aa396ffe0beb4f9e8528f5a8306cd9d9"],"crs":{"custom":false,"name":"EPSG3857"},"default_style":"IPY_MODEL_df14023256094f9da8b9c8540b4b9085","double_click_zoom":true,"dragging":true,"dragging_style":"IPY_MODEL_eb1952bf3c5246819c419253ddf05953","east":0,"fullscreen":false,"inertia":true,"inertia_deceleration":3000,"inertia_max_speed":1500,"interpolation":"bilinear","keyboard":true,"keyboard_pan_offset":80,"keyboard_zoom_offset":1,"layers":["IPY_MODEL_c4912351563b4f499e2b2a85913e7f80","IPY_MODEL_cf180a4c6ee046348fcce167c44a2e28"],"layout":"IPY_MODEL_e2732137bb0f4726af25402e42899122","left":9007199254740991,"max_zoom":null,"min_zoom":null,"modisdate":"2023-06-28","north":0,"options":["bounce_at_zoom_limits","box_zoom","center","close_popup_on_click","double_click_zoom","dragging","fullscreen","inertia","inertia_deceleration","inertia_max_speed","interpolation","keyboard","keyboard_pan_offset","keyboard_zoom_offset","max_zoom","min_zoom","prefer_canvas","scroll_wheel_zoom","tap","tap_tolerance","touch_zoom","world_copy_jump","zoom","zoom_animation_threshold","zoom_delta","zoom_snap"],"panes":{},"prefer_canvas":false,"right":0,"scroll_wheel_zoom":false,"south":0,"style":"IPY_MODEL_f7f27eac01aa4559834a0be43be297df","tabbable":null,"tap":true,"tap_tolerance":15,"tooltip":null,"top":9007199254740991,"touch_zoom":true,"west":0,"window_url":"","world_copy_jump":false,"zoom":4,"zoom_animation_threshold":4,"zoom_delta":1,"zoom_snap":1}},"39b879ab5d9e4f6a848671c1da62886d":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapModel","state":{"_dom_classes":[],"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMapView","bottom":0,"bounce_at_zoom_limits":true,"box_zoom":true,"center":[52.204793,360.121558],"close_popup_on_click":true,"controls":["IPY_MODEL_13fd3d72b6db45749f2da73f2e000c0b","IPY_MODEL_ed2490e04ab544728a14618d3632f2f8"],"crs":{"custom":false,"name":"EPSG3857"},"default_style":"IPY_MODEL_9c08e32655e649698fbc1b704f4e4654","double_click_zoom":true,"dragging":true,"dragging_style":"IPY_MODEL_541a3a63dbad4d9f82f9a4532df873f6","east":0,"fullscreen":false,"inertia":true,"inertia_deceleration":3000,"inertia_max_speed":1500,"interpolation":"bilinear","keyboard":true,"keyboard_pan_offset":80,"keyboard_zoom_offset":1,"layers":["IPY_MODEL_656ad910c8f541ed93b689d7fc8c348a","IPY_MODEL_edaa3ec8d7c64a449b4164317e23f76a"],"layout":"IPY_MODEL_9263ef6e8d42485ca5d6658ecdf4b822","left":9007199254740991,"max_zoom":null,"min_zoom":null,"modisdate":"2023-06-28","north":0,"options":["bounce_at_zoom_limits","box_zoom","center","close_popup_on_click","double_click_zoom","dragging","fullscreen","inertia","inertia_deceleration","inertia_max_speed","interpolation","keyboard","keyboard_pan_offset","keyboard_zoom_offset","max_zoom","min_zoom","prefer_canvas","scroll_wheel_zoom","tap","tap_tolerance","touch_zoom","world_copy_jump","zoom","zoom_animation_threshold","zoom_delta","zoom_snap"],"panes":{},"prefer_canvas":false,"right":0,"scroll_wheel_zoom":false,"south":0,"style":"IPY_MODEL_4f4eee9c19d043c986617b109394f9b7","tabbable":null,"tap":true,"tap_tolerance":15,"tooltip":null,"top":9007199254740991,"touch_zoom":true,"west":0,"window_url":"","world_copy_jump":false,"zoom":4,"zoom_animation_threshold":4,"zoom_delta":1,"zoom_snap":1}},"3adc240b12cc4f0084aec39ebb7eaac6":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"3cf5feab6f1d42b19e9b926a21854e78":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletAttributionControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletAttributionControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletAttributionControlView","options":["position","prefix"],"position":"bottomright","prefix":"ipyleaflet"}},"4f4eee9c19d043c986617b109394f9b7":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"541a3a63dbad4d9f82f9a4532df873f6":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"move"}},"5882e48716b443709f332a613cd31d08":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletZoomControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletZoomControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletZoomControlView","options":["position","zoom_in_text","zoom_in_title","zoom_out_text","zoom_out_title"],"position":"topleft","zoom_in_text":"+","zoom_in_title":"Zoom in","zoom_out_text":"-","zoom_out_title":"Zoom out"}},"59ad9ab4bf684320b6257301ac22c062":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapModel","state":{"_dom_classes":[],"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMapView","bottom":0,"bounce_at_zoom_limits":true,"box_zoom":true,"center":[52.204793,360.121558],"close_popup_on_click":true,"controls":["IPY_MODEL_7d73e7ef920f44b3905df6a188b47735","IPY_MODEL_d9023c86b8734d26940b0c5c36f5b443"],"crs":{"custom":false,"name":"EPSG3857"},"default_style":"IPY_MODEL_3adc240b12cc4f0084aec39ebb7eaac6","double_click_zoom":true,"dragging":true,"dragging_style":"IPY_MODEL_8eae606d2e7b42898e76997d73c33d44","east":0,"fullscreen":false,"inertia":true,"inertia_deceleration":3000,"inertia_max_speed":1500,"interpolation":"bilinear","keyboard":true,"keyboard_pan_offset":80,"keyboard_zoom_offset":1,"layers":["IPY_MODEL_9a5f3854b31b4340b66dd43649dd3cdd","IPY_MODEL_932cd5f8efac4980a0cf2083c99305c0"],"layout":"IPY_MODEL_cfabafd2dc6547859309964cde3e59f8","left":9007199254740991,"max_zoom":null,"min_zoom":null,"modisdate":"2023-06-28","north":0,"options":["bounce_at_zoom_limits","box_zoom","center","close_popup_on_click","double_click_zoom","dragging","fullscreen","inertia","inertia_deceleration","inertia_max_speed","interpolation","keyboard","keyboard_pan_offset","keyboard_zoom_offset","max_zoom","min_zoom","prefer_canvas","scroll_wheel_zoom","tap","tap_tolerance","touch_zoom","world_copy_jump","zoom","zoom_animation_threshold","zoom_delta","zoom_snap"],"panes":{},"prefer_canvas":false,"right":0,"scroll_wheel_zoom":false,"south":0,"style":"IPY_MODEL_28b00436f0354ffe8ac2cd63822a06cd","tabbable":null,"tap":true,"tap_tolerance":15,"tooltip":null,"top":9007199254740991,"touch_zoom":true,"west":0,"window_url":"","world_copy_jump":false,"zoom":4,"zoom_animation_threshold":4,"zoom_delta":1,"zoom_snap":1}},"656ad910c8f541ed93b689d7fc8c348a":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletTileLayerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletTileLayerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletTileLayerView","attribution":"Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (<a href=\"https://earthdata.nasa.gov\">ESDIS</a>) with funding provided by NASA/HQ.","base":true,"bottom":true,"bounds":null,"detect_retina":false,"loading":false,"max_native_zoom":null,"max_zoom":9,"min_native_zoom":null,"min_zoom":1,"name":"NASAGIBS.ModisTerraTrueColorCR","no_wrap":false,"opacity":1,"options":["attribution","bounds","detect_retina","max_native_zoom","max_zoom","min_native_zoom","min_zoom","no_wrap","tile_size","tms","zoom_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"show_loading":false,"subitems":[],"tile_size":256,"tms":false,"url":"https://map1.vis.earthdata.nasa.gov/wmts-webmerc/MODIS_Terra_CorrectedReflectance_TrueColor/default/2017-04-08/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg","visible":true,"zoom_offset":0}},"666804a8d26f44e3a69c55453edb12f1":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletZoomControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletZoomControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletZoomControlView","options":["position","zoom_in_text","zoom_in_title","zoom_out_text","zoom_out_title"],"position":"topleft","zoom_in_text":"+","zoom_in_title":"Zoom in","zoom_out_text":"-","zoom_out_title":"Zoom out"}},"7d73e7ef920f44b3905df6a188b47735":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletZoomControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletZoomControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletZoomControlView","options":["position","zoom_in_text","zoom_in_title","zoom_out_text","zoom_out_title"],"position":"topleft","zoom_in_text":"+","zoom_in_title":"Zoom in","zoom_out_text":"-","zoom_out_title":"Zoom out"}},"840d1004e2ad42839adc0595907fb096":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"8eae606d2e7b42898e76997d73c33d44":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"move"}},"9263ef6e8d42485ca5d6658ecdf4b822":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"932cd5f8efac4980a0cf2083c99305c0":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMarkerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMarkerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMarkerView","alt":"","base":false,"bottom":false,"draggable":true,"icon":null,"keyboard":true,"location":[52.204793,360.121558],"name":"","opacity":1,"options":["alt","draggable","keyboard","rise_offset","rise_on_hover","rotation_angle","rotation_origin","title","z_index_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"rise_offset":250,"rise_on_hover":false,"rotation_angle":0,"rotation_origin":"","subitems":[],"title":"","visible":true,"z_index_offset":0}},"98b96619a9ef4c7996a6328f1a0e2806":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapModel","state":{"_dom_classes":[],"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMapView","bottom":0,"bounce_at_zoom_limits":true,"box_zoom":true,"center":[52.204793,360.121558],"close_popup_on_click":true,"controls":["IPY_MODEL_666804a8d26f44e3a69c55453edb12f1","IPY_MODEL_3cf5feab6f1d42b19e9b926a21854e78"],"crs":{"custom":false,"name":"EPSG3857"},"default_style":"IPY_MODEL_e4e72b7cd0334c45aad4e46b0eee3ff9","double_click_zoom":true,"dragging":true,"dragging_style":"IPY_MODEL_f480eeb567df45318060a58291585609","east":0,"fullscreen":false,"inertia":true,"inertia_deceleration":3000,"inertia_max_speed":1500,"interpolation":"bilinear","keyboard":true,"keyboard_pan_offset":80,"keyboard_zoom_offset":1,"layers":["IPY_MODEL_e43943009ade4ee1b5a3c1ed2eb1ca98","IPY_MODEL_28d88137c33c47fda9abba9c061776df"],"layout":"IPY_MODEL_1470102c3fe44858b00a6eb77e0de649","left":9007199254740991,"max_zoom":null,"min_zoom":null,"modisdate":"2023-06-28","north":0,"options":["bounce_at_zoom_limits","box_zoom","center","close_popup_on_click","double_click_zoom","dragging","fullscreen","inertia","inertia_deceleration","inertia_max_speed","interpolation","keyboard","keyboard_pan_offset","keyboard_zoom_offset","max_zoom","min_zoom","prefer_canvas","scroll_wheel_zoom","tap","tap_tolerance","touch_zoom","world_copy_jump","zoom","zoom_animation_threshold","zoom_delta","zoom_snap"],"panes":{},"prefer_canvas":false,"right":0,"scroll_wheel_zoom":false,"south":0,"style":"IPY_MODEL_840d1004e2ad42839adc0595907fb096","tabbable":null,"tap":true,"tap_tolerance":15,"tooltip":null,"top":9007199254740991,"touch_zoom":true,"west":0,"window_url":"","world_copy_jump":false,"zoom":4,"zoom_animation_threshold":4,"zoom_delta":1,"zoom_snap":1}},"9a5f3854b31b4340b66dd43649dd3cdd":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletTileLayerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletTileLayerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletTileLayerView","attribution":"Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (<a href=\"https://earthdata.nasa.gov\">ESDIS</a>) with funding provided by NASA/HQ.","base":true,"bottom":true,"bounds":null,"detect_retina":false,"loading":false,"max_native_zoom":null,"max_zoom":9,"min_native_zoom":null,"min_zoom":1,"name":"NASAGIBS.ModisTerraTrueColorCR","no_wrap":false,"opacity":1,"options":["attribution","bounds","detect_retina","max_native_zoom","max_zoom","min_native_zoom","min_zoom","no_wrap","tile_size","tms","zoom_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"show_loading":false,"subitems":[],"tile_size":256,"tms":false,"url":"https://map1.vis.earthdata.nasa.gov/wmts-webmerc/MODIS_Terra_CorrectedReflectance_TrueColor/default/2017-04-08/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg","visible":true,"zoom_offset":0}},"9c08e32655e649698fbc1b704f4e4654":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"aa396ffe0beb4f9e8528f5a8306cd9d9":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletAttributionControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletAttributionControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletAttributionControlView","options":["position","prefix"],"position":"bottomright","prefix":"ipyleaflet"}},"c4912351563b4f499e2b2a85913e7f80":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletTileLayerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletTileLayerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletTileLayerView","attribution":"Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (<a href=\"https://earthdata.nasa.gov\">ESDIS</a>) with funding provided by NASA/HQ.","base":true,"bottom":true,"bounds":null,"detect_retina":false,"loading":false,"max_native_zoom":null,"max_zoom":9,"min_native_zoom":null,"min_zoom":1,"name":"NASAGIBS.ModisTerraTrueColorCR","no_wrap":false,"opacity":1,"options":["attribution","bounds","detect_retina","max_native_zoom","max_zoom","min_native_zoom","min_zoom","no_wrap","tile_size","tms","zoom_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"show_loading":false,"subitems":[],"tile_size":256,"tms":false,"url":"https://map1.vis.earthdata.nasa.gov/wmts-webmerc/MODIS_Terra_CorrectedReflectance_TrueColor/default/2017-04-08/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg","visible":true,"zoom_offset":0}},"cf180a4c6ee046348fcce167c44a2e28":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMarkerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMarkerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMarkerView","alt":"","base":false,"bottom":false,"draggable":true,"icon":null,"keyboard":true,"location":[52.204793,360.121558],"name":"","opacity":1,"options":["alt","draggable","keyboard","rise_offset","rise_on_hover","rotation_angle","rotation_origin","title","z_index_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"rise_offset":250,"rise_on_hover":false,"rotation_angle":0,"rotation_origin":"","subitems":[],"title":"","visible":true,"z_index_offset":0}},"cfabafd2dc6547859309964cde3e59f8":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"d9023c86b8734d26940b0c5c36f5b443":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletAttributionControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletAttributionControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletAttributionControlView","options":["position","prefix"],"position":"bottomright","prefix":"ipyleaflet"}},"df14023256094f9da8b9c8540b4b9085":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"e2732137bb0f4726af25402e42899122":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"e43943009ade4ee1b5a3c1ed2eb1ca98":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletTileLayerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletTileLayerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletTileLayerView","attribution":"Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (<a href=\"https://earthdata.nasa.gov\">ESDIS</a>) with funding provided by NASA/HQ.","base":true,"bottom":true,"bounds":null,"detect_retina":false,"loading":false,"max_native_zoom":null,"max_zoom":9,"min_native_zoom":null,"min_zoom":1,"name":"NASAGIBS.ModisTerraTrueColorCR","no_wrap":false,"opacity":1,"options":["attribution","bounds","detect_retina","max_native_zoom","max_zoom","min_native_zoom","min_zoom","no_wrap","tile_size","tms","zoom_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"show_loading":false,"subitems":[],"tile_size":256,"tms":false,"url":"https://map1.vis.earthdata.nasa.gov/wmts-webmerc/MODIS_Terra_CorrectedReflectance_TrueColor/default/2017-04-08/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg","visible":true,"zoom_offset":0}},"e4e72b7cd0334c45aad4e46b0eee3ff9":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}},"eb1952bf3c5246819c419253ddf05953":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"move"}},"ed2490e04ab544728a14618d3632f2f8":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletAttributionControlModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletAttributionControlModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletAttributionControlView","options":["position","prefix"],"position":"bottomright","prefix":"ipyleaflet"}},"edaa3ec8d7c64a449b4164317e23f76a":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMarkerModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMarkerModel","_view_count":null,"_view_module":"jupyter-leaflet","_view_module_version":"^0.17","_view_name":"LeafletMarkerView","alt":"","base":false,"bottom":false,"draggable":true,"icon":null,"keyboard":true,"location":[52.204793,360.121558],"name":"","opacity":1,"options":["alt","draggable","keyboard","rise_offset","rise_on_hover","rotation_angle","rotation_origin","title","z_index_offset"],"pane":"","popup":null,"popup_max_height":null,"popup_max_width":300,"popup_min_width":50,"rise_offset":250,"rise_on_hover":false,"rotation_angle":0,"rotation_origin":"","subitems":[],"title":"","visible":true,"z_index_offset":0}},"f480eeb567df45318060a58291585609":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"move"}},"f7f27eac01aa4559834a0be43be297df":{"model_module":"jupyter-leaflet","model_module_version":"^0.17","model_name":"LeafletMapStyleModel","state":{"_model_module":"jupyter-leaflet","_model_module_version":"^0.17","_model_name":"LeafletMapStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","cursor":"grab"}}},"version_major":2,"version_minor":0}
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {

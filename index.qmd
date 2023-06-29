@@ -12,21 +12,73 @@ institute:
   - "Temple University, USA"
 date: "2023-06-29"
 date-format: long
+params:
+  days:
+    label: "Number of Previous Days"
+    value: 90
+    input: slider
+    min: 30
+    max: 360
+  Msg:
+    label: "message"
+    value: 1
+    input: slider
+    min: 0
+    max: 1 
+  region:
+    label: "Regions:"
+    value: Europe
+    input: select
+    choices: [North America, Europe, Asia]
 format:
   revealjs:
     theme: [dark, style/custom.scss]
     css: style/metacom_logo.css
+    chalkboard: true
+    slide-number: true
+    preview-links: auto
     pointer:
       color: "#e7298a"
       pointerSize: 24
+    include-in-header:
+      text: |
+        <script src="custom.js"></script>
 revealjs-plugins:
   - pointer
+  
 ---
 
-## Code
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+## Decentraland {background-video="./vids/dcl_hero.mp4" background-video-loop="true" background-opacity="0.4"}
+::: incremental
+-   A virtual world based on Ethereum
+-   It touts itself as the first to be owned by its users
+-   It started in 2015 and launched in February 2020
+-   It uses MANA as its own cryptocurrency
+-   Decentralized Autonomous Organization (DAO)
+-   NFT trading of land, usernames, and **wearables**
+-   Influence on how fashion assets will work on the Metaverse
+:::
+
+## Metaverse Fashion Week
+
+::: columns
+::: {.column width="35%"}
+<video data-autoplay loop src="vids/mvfw_dg.mp4">
+
+</video>
+:::
+
+::: {.column width="65%"}
+Held in March 2022, the MVFW involved several in-world fashion events and a wide variety of commodity and luxury brands, including *Tommy Hilfiger* and *Dolce & Gabbana*.
+:::
+:::
+
+## Python Code (option 1)
 ```{python}
 #| echo: true
+#| code-fold: true
+#| code-summary: "expand for full code"
+#| output-location: column-fragment
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -39,13 +91,131 @@ ax.set_rticks([0.5, 1, 1.5, 2])
 ax.grid(True)
 ```
 
-## Learn with Error
+
+## Python Code (option 2)
+:::: {.columns}
+
+::: {.column width="60%"}
+```{.python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+```
+:::
+
+::: {.column width="40%"}
+```{python}
+#| echo: true
+#| code-fold: true
+#| code-summary: "expand for full code"
+#| output-location: slide
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+```
+:::
+
+::::
+
+## Test Animate {auto-animate="true"}
+
+```r
+# Fill in the spot we created for a plot
+output$phonePlot <- renderPlot({
+  # Render a barplot
+})
+```
+
+## Test Animate {auto-animate=true}
+
+```r
+# Fill in the spot we created for a plot
+output$phonePlot <- renderPlot({
+  # Render a barplot
+  barplot(WorldPhones[,input$region]*1000, 
+          main=input$region,
+          ylab="Number of Telephones",
+          xlab="Year")
+})
+```
+
+## crazy animate {auto-animate=true auto-animate-easing="ease-in-out"}
+
+::: {.r-hstack}
+::: {data-id="box1" auto-animate-delay="0" style="background: #2780e3; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background: #3fb618; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background: #e83e8c; width: 200px; height: 150px; margin: 10px;"}
+:::
+:::
+
+## crazy animate  {auto-animate=true auto-animate-easing="ease-in-out"}
+
+::: {.r-stack}
+::: {data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+
+::: {data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px;"}
+:::
+
+::: {data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;"}
+:::
+:::
+
+## ok
+```{python}
+from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
+m = Map(
+  basemap=basemap_to_tiles(
+    basemaps.NASAGIBS.ModisTerraTrueColorCR, "2017-04-08"
+  ),
+  center=(52.204793, 360.121558),
+  zoom=4
+)
+m.add_layer(Marker(location=(52.204793, 360.121558)))
+m
+```
+
+## sll
+```{ojs}
+viewof m = Inputs.range(
+  [0, 1], 
+  {value: 0, step: 1, label: "Message:"}
+)
+```
+```{python}
+p=m+1
+p
+```
+
+## Learn with Error (LWE)
+
+::: {.panel-tabset}
+###  Formulation
 You can randomly generate a vector $A$ of random number and a noise vector $n$ with a secret value $s$ to create 
 $$
 B=As+n
 $$
-```{python}
-#| echo: true
+
+### Code
+```{.python}
 A=[80, 86, 19, 62, 2, 83, 25, 47, 20, 58, 45, 15, 30, 68, 4, 13, 8, 6, 42, 92]
 e=[3, 3, 4, 1, 3, 3, 4, 4, 1, 4, 3, 3, 2, 2, 3, 2, 4, 4, 1, 3]
 s=5
@@ -53,20 +223,73 @@ q = 97
 B=[]
 for x in range(0,len(A)):
    B.append((A[x]*s+e[x])%q)
-B
+print(">> B={}".format(B))
 ```
-## Encryption
-You can create 
+
+### Result
+
+```{python}
+#| echo: false
+#| code-fold: true
+#| code-summary: "expand for full code"
+A=[80, 86, 19, 62, 2, 83, 25, 47, 20, 58, 45, 15, 30, 68, 4, 13, 8, 6, 42, 92]
+e=[3, 3, 4, 1, 3, 3, 4, 4, 1, 4, 3, 3, 2, 2, 3, 2, 4, 4, 1, 3]
+s=5
+q = 97
+B=[]
+for x in range(0,len(A)):
+   B.append((A[x]*s+e[x])%q)
+print(">> B={}".format(B))
+```
+
+:::
+
+## test selection
+```{python}
+#| echo: false
+radius = 10
+from IPython.display import display, Markdown
+display(Markdown("""
+The radius of the circle is {radius}.
+""".format(radius = radius)))
+```
+
+## Learn with Error
+You can randomly generate a vector $A$ of random number and a noise vector $n$ with a secret value $s$ to create 
+$$
+B=As+n
+$$
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| code-summary: "expand for full code"
+A=[80, 86, 19, 62, 2, 83, 25, 47, 20, 58, 45, 15, 30, 68, 4, 13, 8, 6, 42, 92]
+e=[3, 3, 4, 1, 3, 3, 4, 4, 1, 4, 3, 3, 2, 2, 3, 2, 4, 4, 1, 3]
+s=5
+q = 97
+B=[]
+for x in range(0,len(A)):
+   B.append((A[x]*s+e[x])%q)
+print(">> B={}".format(B))
+```
+
+Now, $A$ and $B$ are made as public keys while $s$ is the secret private key
+
+## Encryption for a message $M$
+
+```{=tex}
 \begin{eqnarray*}
 u&=&\left(\sum_{i}^{} {A_i}\right) \mod q\\
 v&=&\left(\sum_{i}^{}{B_i} +\left\lfloor\frac{q}{2}M\right\rfloor \right) \mod q
 \end{eqnarray*}
-
+```
 ```{python}
 #| echo: true
+#| code-fold: true
+#| code-summary: "expand for full code"
 import math
-u=0
-v=0
+u,v=[0,0] 
 M=0
 for x in range(0,len(A)):
    u=(u+A[x])%q
@@ -76,28 +299,29 @@ print(">> u:{}, v:{}".format(u,v))
 ```
 
 ## Decryption
-You can create 
-$$
+
+You can create $$
 d = (v-su) \mod q
 $$
 
 $$
 \bar{m}=\begin{cases}
-0 & d <\frac{q}{2},\\
-1 & d>\frac{q}{2}
+1 & d <\frac{q}{2},\\
+0 & d>\frac{q}{2}
 \end{cases}
 $$
+
 ```{python}
 #| echo: true
 import math
 print(">> u:{}, v:{}, s:{}".format(u,v, s))
 d = (v-s*u) %q
-mbar = 1 if d > q/2 else 0
-print(">> d:{}, m:{}".format(d,mbar))
+mbar = 1 if d < q/2 else 0
+print(">> d:{}, m:{}, orginal message m:{}".format(d,mbar,M))
 ```
 
-
 ## get results
+
 ```{python}
 #| echo: true
 import pandas as pd
@@ -112,3 +336,92 @@ ax.set_rticks([0.5, 1, 1.5, 2])
 ax.grid(True)
 ```
 
+## Published Wearables
+
+::: columns
+::: {.column .incremental width="55%"}
+-   Circa 88% of submitted items are published
+-   The vast majority (92.3%) of wearables are unisex
+-   Most collections (68.8%) have only one item
+-   Share by rarity follows a bell-shaped distribution
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column .fragment width="40%"}
+::: {style="font-size: 75%;"}
+|    Rarity |  Limit | Share |
+|-----------|-------:|------:|
+|    unique |      1 |  4.2% |
+|    mythic |     10 |  7.6% |
+| legendary |    100 | 32.3% |
+|      epic |   1000 | 31.5% |
+|      rare |   5000 | 11.7% |
+|  uncommon |  10000 |  7.4% |
+|    common | 100000 |  5.3% |
+:::
+:::
+:::
+
+## Primary Sale Price Linear Model
+
+```{r}
+htmltools::withTags(
+  table(
+    thead(
+      tr(
+        th(""),
+        th("log₁₀(price USD)", colspan=2, align="center")
+      ),
+      tr(
+        th("Coefficient"),
+        th("Estimate"),
+        th("Std. Error")
+      ),
+      style = "background-color:#333;"
+    ),
+    tbody(
+      tr(
+        td("(Intercept)"),
+        td("2.137", align="right"),
+        td("0.049", align="right")
+      ),
+      tr(
+        td("log₁₀(rarity limit)"),
+        td("–0.389", align="right"),
+        td("0.012", align="right")
+      ),
+      tr(
+        td("is single-item collection"),
+        td("–0.325", align="right"),
+        td("0.024", align="right")
+      ),
+      tr(
+        td("is unique"),
+        td("0.569", align="right"),
+        td("0.119", align="right")
+      ),
+      tr(
+        td("textures"),
+        td("0.057", align="right"),
+        td("0.013", align="right")
+      )
+    )
+  )
+)
+```
+## Line Highlighting
+```{.python code-line-numbers="6-8"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
