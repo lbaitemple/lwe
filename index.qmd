@@ -179,7 +179,7 @@ output$phonePlot <- renderPlot({
 :::
 :::
 
-## ok
+## Interactive
 ```{python}
 from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
 m = Map(
@@ -193,7 +193,7 @@ m.add_layer(Marker(location=(52.204793, 360.121558)))
 m
 ```
 
-## sll
+## OJS not working with python
 ```{ojs}
 viewof m = Inputs.range(
   [0, 1], 
@@ -229,7 +229,7 @@ print(">> B={}".format(B))
 ### Result
 
 ```{python}
-#| echo: false
+#| echo: true
 #| code-fold: true
 #| code-summary: "expand for full code"
 A=[80, 86, 19, 62, 2, 83, 25, 47, 20, 58, 45, 15, 30, 68, 4, 13, 8, 6, 42, 92]
