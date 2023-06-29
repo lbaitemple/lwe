@@ -1,0 +1,13 @@
+#title-slide .date::before {
+  content:url('../imgs/ic3n2023.png');
+  position: relative;
+  margin: auto;
+  display: block;
+}
+
+#title-slide .date::after {
+  content: "Hawaii, USA";
+  position: relative;
+  margin: auto;
+  display: block;
+}

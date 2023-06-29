@@ -1,0 +1,114 @@
+---
+title: "Learn with Error ..."
+pagetitle: "Toward Blockchain-based Fashion Wearables in the Metaverse: The Case of Decentraland"
+jupyter: python3
+subtitle: "A public encryption for post quantum computing"
+author:
+  - "Li Bai"
+  - "Anway Bose"
+author-meta: "Li Bai"
+institute:
+  - "Temple University, USA"
+  - "Temple University, USA"
+date: "2023-06-29"
+date-format: long
+format:
+  revealjs:
+    theme: [dark, style/custom.scss]
+    css: style/metacom_logo.css
+    pointer:
+      color: "#e7298a"
+      pointerSize: 24
+revealjs-plugins:
+  - pointer
+---
+
+## Code
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+```{python}
+#| echo: true
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+```
+
+## Learn with Error
+You can randomly generate a vector $A$ of random number and a noise vector $n$ with a secret value $s$ to create 
+$$
+B=As+n
+$$
+```{python}
+#| echo: true
+A=[80, 86, 19, 62, 2, 83, 25, 47, 20, 58, 45, 15, 30, 68, 4, 13, 8, 6, 42, 92]
+e=[3, 3, 4, 1, 3, 3, 4, 4, 1, 4, 3, 3, 2, 2, 3, 2, 4, 4, 1, 3]
+s=5
+q = 97
+B=[]
+for x in range(0,len(A)):
+   B.append((A[x]*s+e[x])%q)
+B
+```
+## Encryption
+You can create 
+\begin{eqnarray*}
+u&=&\left(\sum_{i}^{} {A_i}\right) \mod q\\
+v&=&\left(\sum_{i}^{}{B_i} +\left\lfloor\frac{q}{2}M\right\rfloor \right) \mod q
+\end{eqnarray*}
+
+```{python}
+#| echo: true
+import math
+u=0
+v=0
+M=0
+for x in range(0,len(A)):
+   u=(u+A[x])%q
+   v=v+math.floor(q/2)*M
+
+print(">> u:{}, v:{}".format(u,v))
+```
+
+## Decryption
+You can create 
+$$
+d = (v-su) \mod q
+$$
+
+$$
+\bar{m}=\begin{cases}
+0 & d <\frac{q}{2},\\
+1 & d>\frac{q}{2}
+\end{cases}
+$$
+```{python}
+#| echo: true
+import math
+print(">> u:{}, v:{}, s:{}".format(u,v, s))
+d = (v-s*u) %q
+mbar = 1 if d > q/2 else 0
+print(">> d:{}, m:{}".format(d,mbar))
+```
+
+
+## get results
+```{python}
+#| echo: true
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+```
+
