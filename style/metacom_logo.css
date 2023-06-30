@@ -6,7 +6,7 @@
 }
 
 #title-slide .date::after {
-  content: "Hawaii, USA";
+  content: "Arlington, USA";
   position: relative;
   margin: auto;
   display: block;

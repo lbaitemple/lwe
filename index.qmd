@@ -1,14 +1,11 @@
 ---
 title: "Learn with Error ..."
-pagetitle: "Toward Blockchain-based Fashion Wearables in the Metaverse: The Case of Decentraland"
 jupyter: python3
-subtitle: "A public encryption for post quantum computing"
+subtitle: "A public encryption method for post-quantum cryptography"
 author:
   - "Li Bai"
-  - "Anway Bose"
 author-meta: "Li Bai"
 institute:
-  - "Temple University, USA"
   - "Temple University, USA"
 date: "2023-06-29"
 date-format: long
@@ -47,163 +44,29 @@ revealjs-plugins:
   - pointer
   
 ---
+## Cyber Security {background-video="./vids/cyber.mp4" background-video-loop="true" background-opacity="0.4"}
 
-## Decentraland {background-video="./vids/dcl_hero.mp4" background-video-loop="true" background-opacity="0.4"}
 ::: incremental
--   A virtual world based on Ethereum
--   It touts itself as the first to be owned by its users
--   It started in 2015 and launched in February 2020
--   It uses MANA as its own cryptocurrency
--   Decentralized Autonomous Organization (DAO)
--   NFT trading of land, usernames, and **wearables**
--   Influence on how fashion assets will work on the Metaverse
+-   Why do we need to develop new encryption
+-   Learning with Error
+-   How does LWE work
 :::
-
-## Metaverse Fashion Week
-
-::: columns
-::: {.column width="35%"}
-<video data-autoplay loop src="vids/mvfw_dg.mp4">
-
-</video>
-:::
-
-::: {.column width="65%"}
-Held in March 2022, the MVFW involved several in-world fashion events and a wide variety of commodity and luxury brands, including *Tommy Hilfiger* and *Dolce & Gabbana*.
-:::
-:::
-
-## Python Code (option 1)
-```{python}
-#| echo: true
-#| code-fold: true
-#| code-summary: "expand for full code"
-#| output-location: column-fragment
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-```
-
-
-## Python Code (option 2)
+## When will a large-scale quantum computer be built?
 :::: {.columns}
 
-::: {.column width="60%"}
-```{.python}
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-```
-:::
-
 ::: {.column width="40%"}
-```{python}
-#| echo: true
-#| code-fold: true
-#| code-summary: "expand for full code"
-#| output-location: slide
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+![](imgs/quantum.png){.absolute top=200 left=0 width="350" height="300"}
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="55%"}
+“I estimate a 1/7 chance of breaking RSA-2048 by 2026
+and a 1/2 chance by 2031.”
 
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-```
+  - Michele Mosca, November 2015 https://eprint.iacr.org/2015/1075
 :::
 
 ::::
-
-## Test Animate {auto-animate="true"}
-
-```r
-# Fill in the spot we created for a plot
-output$phonePlot <- renderPlot({
-  # Render a barplot
-})
-```
-
-## Test Animate {auto-animate=true}
-
-```r
-# Fill in the spot we created for a plot
-output$phonePlot <- renderPlot({
-  # Render a barplot
-  barplot(WorldPhones[,input$region]*1000, 
-          main=input$region,
-          ylab="Number of Telephones",
-          xlab="Year")
-})
-```
-
-## crazy animate {auto-animate=true auto-animate-easing="ease-in-out"}
-
-::: {.r-hstack}
-::: {data-id="box1" auto-animate-delay="0" style="background: #2780e3; width: 200px; height: 150px; margin: 10px;"}
-:::
-
-::: {data-id="box2" auto-animate-delay="0.1" style="background: #3fb618; width: 200px; height: 150px; margin: 10px;"}
-:::
-
-::: {data-id="box3" auto-animate-delay="0.2" style="background: #e83e8c; width: 200px; height: 150px; margin: 10px;"}
-:::
-:::
-
-## crazy animate  {auto-animate=true auto-animate-easing="ease-in-out"}
-
-::: {.r-stack}
-::: {data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;"}
-:::
-
-::: {data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px;"}
-:::
-
-::: {data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;"}
-:::
-:::
-
-## Interactive
-```{python}
-from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
-m = Map(
-  basemap=basemap_to_tiles(
-    basemaps.NASAGIBS.ModisTerraTrueColorCR, "2017-04-08"
-  ),
-  center=(52.204793, 360.121558),
-  zoom=4
-)
-m.add_layer(Marker(location=(52.204793, 360.121558)))
-m
-```
-
-## OJS not working with python
-```{ojs}
-viewof m = Inputs.range(
-  [0, 1], 
-  {value: 0, step: 1, label: "Message:"}
-)
-```
-```{python}
-p=m+1
-p
-```
 
 ## Learn with Error (LWE)
 
@@ -216,13 +79,17 @@ $$
 
 ### Code
 ```{.python}
-A=[80, 86, 19, 62, 2, 83, 25, 47, 20, 58, 45, 15, 30, 68, 4, 13, 8, 6, 42, 92]
-e=[3, 3, 4, 1, 3, 3, 4, 4, 1, 4, 3, 3, 2, 2, 3, 2, 4, 4, 1, 3]
-s=5
-q = 97
+import random
+q= 97      # find a prime number
+s=5       # private key
+nvals = 10 # generate a vector of ten elements
+A=random.sample(range(q), nvals)
 B=[]
 for x in range(0,len(A)):
-   B.append((A[x]*s+e[x])%q)
+   e = random.randint(1,4)
+   B.append((A[x]*s+e)%q)
+print(">> public keys are: ")   
+print(">> A={}".format(A))
 print(">> B={}".format(B))
 ```
 
@@ -232,196 +99,114 @@ print(">> B={}".format(B))
 #| echo: true
 #| code-fold: true
 #| code-summary: "expand for full code"
-A=[80, 86, 19, 62, 2, 83, 25, 47, 20, 58, 45, 15, 30, 68, 4, 13, 8, 6, 42, 92]
-e=[3, 3, 4, 1, 3, 3, 4, 4, 1, 4, 3, 3, 2, 2, 3, 2, 4, 4, 1, 3]
-s=5
-q = 97
+import random
+q= 97      # find a prime number
+s=5       # private key
+nvals = 10 # generate a vector of ten elements
+A=random.sample(range(q), nvals)
 B=[]
 for x in range(0,len(A)):
-   B.append((A[x]*s+e[x])%q)
+   e = random.randint(1,4)
+   B.append((A[x]*s+e)%q)
+print(">> public keys are: ")   
+print(">> A={}".format(A))
 print(">> B={}".format(B))
 ```
 
 :::
 
-## test selection
-```{python}
-#| echo: false
-radius = 10
-from IPython.display import display, Markdown
-display(Markdown("""
-The radius of the circle is {radius}.
-""".format(radius = radius)))
-```
 
-## Learn with Error
-You can randomly generate a vector $A$ of random number and a noise vector $n$ with a secret value $s$ to create 
-$$
-B=As+n
-$$
+## Learn with Error (LWE) - Encryption
 
-```{python}
-#| echo: true
-#| code-fold: true
-#| code-summary: "expand for full code"
-A=[80, 86, 19, 62, 2, 83, 25, 47, 20, 58, 45, 15, 30, 68, 4, 13, 8, 6, 42, 92]
-e=[3, 3, 4, 1, 3, 3, 4, 4, 1, 4, 3, 3, 2, 2, 3, 2, 4, 4, 1, 3]
-s=5
-q = 97
-B=[]
-for x in range(0,len(A)):
-   B.append((A[x]*s+e[x])%q)
-print(">> B={}".format(B))
-```
-
-Now, $A$ and $B$ are made as public keys while $s$ is the secret private key
-
-## Encryption for a message $M$
-
+::: {.panel-tabset}
+###  Formulation
+Get a message M and derive two variables $u$ and $v$ as follows
 ```{=tex}
 \begin{eqnarray*}
-u&=&\left(\sum_{i}^{} {A_i}\right) \mod q\\
-v&=&\left(\sum_{i}^{}{B_i} +\left\lfloor\frac{q}{2}M\right\rfloor \right) \mod q
+u&=&\left(\sum_{i\in sample}^{} {A_i}\right) \mod q\\
+v&=&\left(\sum_{i\in sample}^{}{B_i}\right) +\left\lfloor\frac{q}{2}M\right\rfloor  \mod q
 \end{eqnarray*}
 ```
+
+### Code
+Randomly set the message M, and select 1/4 of the samples
+```{.python code-line-numbers="3-4"}
+import math
+u,v=[0,0] 
+M=1
+sample= random.sample(range(nvals-1), round(nvals/4))
+for x in range(0,len(sample)):
+   u=u+A[sample[x]]
+   v=v+B[sample[x]]
+v=v+math.floor(q/2)*M
+
+u=u%q
+v=v%q
+print(">> u:{}, v:{}".format(u,v))
+```
+
+### Result
+
 ```{python}
 #| echo: true
 #| code-fold: true
 #| code-summary: "expand for full code"
 import math
 u,v=[0,0] 
-M=0
-for x in range(0,len(A)):
-   u=(u+A[x])%q
-   v=v+math.floor(q/2)*M
-
+M=1
+sample= random.sample(range(nvals-1), round(nvals/4))
+for x in range(0,len(sample)):
+   u=u+A[sample[x]]
+   v=v+B[sample[x]]
+v=v+math.floor(q/2)*M
+u=u%q
+v=v%q
+ 
 print(">> u:{}, v:{}".format(u,v))
+
 ```
+:::
 
-## Decryption
+## Learn with Error (LWE) - Decryption
 
-You can create $$
-d = (v-su) \mod q
-$$
-
-$$
-\bar{m}=\begin{cases}
-1 & d <\frac{q}{2},\\
-0 & d>\frac{q}{2}
+::: {.panel-tabset}
+###  Formulation
+The receiver will compute a variable $d$ with received numbers $u$ and $v$ and his/her secret key $s$ as
+```{=tex}
+\begin{eqnarray*}
+d&=& v-su \mod q\\
+\bar{m}&=&\begin{cases}
+0 & d < q/2\\
+1 & d > q/2
 \end{cases}
-$$
+\end{eqnarray*}
+```
 
+### Code
+```{.python}
+print(">> u:{}, v:{}".format(u,v))
+print(">> private key s:{}".format(s))
+print(">> ....")
+print(">> ....")
+d=(v-s*u) % q
+mbar = 1 if d >q/2 else 0
+
+print(">> m:{}, rec m:{}".format(M,mbar))
+```
+
+### Result
 ```{python}
 #| echo: true
-import math
-print(">> u:{}, v:{}, s:{}".format(u,v, s))
-d = (v-s*u) %q
-mbar = 1 if d < q/2 else 0
-print(">> d:{}, m:{}, orginal message m:{}".format(d,mbar,M))
+#| code-fold: true
+#| code-summary: "expand for full code"
+print(">> u:{}, v:{}".format(u,v))
+print(">> private key s:{}".format(s))
+print(">> ....")
+print(">> ....")
+d=(v-s*u) % q
+mbar = 1 if d >q/2 else 0
+
+print(">> m:{}, rec m:{}".format(M,mbar))
+
 ```
-
-## get results
-
-```{python}
-#| echo: true
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-```
-
-## Published Wearables
-
-::: columns
-::: {.column .incremental width="55%"}
--   Circa 88% of submitted items are published
--   The vast majority (92.3%) of wearables are unisex
--   Most collections (68.8%) have only one item
--   Share by rarity follows a bell-shaped distribution
 :::
-
-::: {.column width="5%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column .fragment width="40%"}
-::: {style="font-size: 75%;"}
-|    Rarity |  Limit | Share |
-|-----------|-------:|------:|
-|    unique |      1 |  4.2% |
-|    mythic |     10 |  7.6% |
-| legendary |    100 | 32.3% |
-|      epic |   1000 | 31.5% |
-|      rare |   5000 | 11.7% |
-|  uncommon |  10000 |  7.4% |
-|    common | 100000 |  5.3% |
-:::
-:::
-:::
-
-## Primary Sale Price Linear Model
-
-```{r}
-htmltools::withTags(
-  table(
-    thead(
-      tr(
-        th(""),
-        th("log₁₀(price USD)", colspan=2, align="center")
-      ),
-      tr(
-        th("Coefficient"),
-        th("Estimate"),
-        th("Std. Error")
-      ),
-      style = "background-color:#333;"
-    ),
-    tbody(
-      tr(
-        td("(Intercept)"),
-        td("2.137", align="right"),
-        td("0.049", align="right")
-      ),
-      tr(
-        td("log₁₀(rarity limit)"),
-        td("–0.389", align="right"),
-        td("0.012", align="right")
-      ),
-      tr(
-        td("is single-item collection"),
-        td("–0.325", align="right"),
-        td("0.024", align="right")
-      ),
-      tr(
-        td("is unique"),
-        td("0.569", align="right"),
-        td("0.119", align="right")
-      ),
-      tr(
-        td("textures"),
-        td("0.057", align="right"),
-        td("0.013", align="right")
-      )
-    )
-  )
-)
-```
-## Line Highlighting
-```{.python code-line-numbers="6-8"}
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
